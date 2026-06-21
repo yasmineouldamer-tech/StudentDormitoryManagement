@@ -1,0 +1,6349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1543</width>
+    <height>869</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>200000</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="pagelogin">
+       <property name="styleSheet">
+        <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1501</width>
+          <height>821</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditusername">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>420</y>
+          <width>421</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    /* Balance text dimensions nicely */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Strict padding structure to leave clean space for your icons */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 12px;
+
+    /* Icon Path Definition */
+    background-image: url(:/images/.qtcreator/user.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QLineEdit::placeholder {
+    /* Separate rule explicitly handling empty state hint text rendering */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}</string>
+        </property>
+        <property name="placeholderText">
+         <string>Enter your username</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditpassword">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>490</y>
+          <width>421</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+    /* Set typed text size to a clean, readable 12pt */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    /* Modern structural borders */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Spacing: 50px left for padlock, 45px right to leave room for the eye button */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 45px; 
+
+    /* LEFT SIDE: Padlock Icon */
+    background-image: url(:/images/.qtcreator/padlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Styled proportionally right below the main font size */
+QLineEdit::placeholder {
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}
+
+/* UNIVERSAL FIX FOR THE RIGHT SIDE ICON */
+QLineEdit &gt; QToolButton {
+    qproperty-icon: url(:/images/.qtcreator/hide.png);
+    qproperty-iconSize: QSize(24, 24);
+    border: none;
+    background: transparent;
+}</string>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Enter your password</string>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="toolButton">
+        <property name="geometry">
+         <rect>
+          <x>920</x>
+          <y>510</y>
+          <width>24</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/images/.qtcreator/hide.png</normaloff>:/images/.qtcreator/hide.png</iconset>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_login">
+        <property name="geometry">
+         <rect>
+          <x>530</x>
+          <y>570</y>
+          <width>421</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	font: 22pt &quot;Segoe UI&quot;;
+    background-color: #0f2446; /* Dark blue */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}</string>
+        </property>
+        <property name="text">
+         <string>LOGIN</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="home">
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>10</y>
+          <width>1301</width>
+          <height>841</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>-30</y>
+           <width>1201</width>
+           <height>821</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>10</y>
+           <width>93</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color:#3498DB;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px;
+}
+
+QPushButton:hover{
+    background-color:#2980B9;
+}
+
+QPushButton:pressed{
+    background-color:#1F618D;
+}</string>
+         </property>
+         <property name="text">
+          <string>Save Data</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_loadData">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>70</y>
+           <width>93</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color:#3498DB;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px;
+}
+
+QPushButton:hover{
+    background-color:#2980B9;
+}
+
+QPushButton:pressed{
+    background-color:#1F618D;
+}</string>
+         </property>
+         <property name="text">
+          <string>Load Data</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_reset">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>120</y>
+           <width>93</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+    background-color:#3498DB;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:bold;
+    padding:8px;
+}
+
+QPushButton:hover{
+    background-color:#2980B9;
+}
+
+QPushButton:pressed{
+    background-color:#1F618D;
+}</string>
+         </property>
+         <property name="text">
+          <string>Reset Data</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="sidebarFrame">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>301</width>
+          <height>901</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#sidebarFrame {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="btn_dashboard">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>170</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>Dashboard</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_room">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>400</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>ROOMS</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_dormitory">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>480</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>DORMITORY</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_restaurant">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>560</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>RESTAURANT</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_logout">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>650</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>LOG OUT</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>320</y>
+           <width>271</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>STUDENTS</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>0</y>
+           <width>161</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #0b1e36;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_home3_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>240</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="student">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 226, 224);</string>
+       </property>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>730</x>
+          <y>20</y>
+          <width>401</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+	font: 700 22pt &quot;Segoe UI&quot;;
+	background-color: rgb(0, 0, 98);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Student management</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>550</y>
+          <width>1041</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QTableWidget" name="tableWidget_students">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>-10</y>
+           <width>1011</width>
+           <height>291</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTableWidget {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    gridline-color: #e5e5e5;
+    font-size: 14pt;
+}
+/* 1. Style the parent header container to remove ugly native margins/borders */
+QHeaderView {
+    background-color: #000050; /* Forces the whole background bar to be blue */
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 2. Update your section style so it matches perfectly */
+QHeaderView::section {
+    background-color: #000050; 
+    color: #ffffff !important;  
+    font-weight: bold;
+    font-size: 15px;
+    qproperty-alignment: 'AlignCenter'; 
+    border: none;
+    /* Add a clean, very subtle line between columns so they don't blend blindly */
+    border-right: 1px solid #12126a; 
+    padding: 0px;
+}
+
+/* 3. Remove any gaps at the very top left/right corner of the table */
+QTableWidget QTableCornerButton::section {
+    background-color: #000050;
+    border: none;
+}</string>
+         </property>
+         <property name="rowCount">
+          <number>3</number>
+         </property>
+         <property name="columnCount">
+          <number>3</number>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>200</number>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>200</number>
+         </attribute>
+         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <row/>
+         <row/>
+         <row/>
+         <column>
+          <property name="text">
+           <string>Student ID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Full Name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Academic Year</string>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="sidebarFrame_2">
+        <property name="geometry">
+         <rect>
+          <x>-30</x>
+          <y>-30</y>
+          <width>321</width>
+          <height>861</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#sidebarFrame_2 {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="btn_dashboard_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>180</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>Dashboard</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_room_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>410</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>ROOMS</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_dormitory_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>490</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>DORMITORY</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_restaurant_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>570</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>RESTAURANT</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_logout_2">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>670</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>LOG OUT</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>340</y>
+           <width>271</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>STUDENTS</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>30</y>
+           <width>161</width>
+           <height>141</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #0b1e36;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_home3">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>260</y>
+           <width>291</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_addstudent_4">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>90</y>
+          <width>411</width>
+          <height>451</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="btn_addstudent">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>390</y>
+           <width>251</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+         </property>
+         <property name="text">
+          <string>Add Student</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_studentId">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>130</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Enter student ID</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_studentName">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>240</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Enter full name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Student ID</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>180</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Full Name</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Add Stusent</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_25">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>290</y>
+           <width>191</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Academic Year</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_year">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>340</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Enter the Academic Year</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_addstudent_5">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>200</y>
+          <width>551</width>
+          <height>251</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Shadow::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="btn_searchStudent">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>170</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+         </property>
+         <property name="text">
+          <string>Search</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_searchId">
+         <property name="geometry">
+          <rect>
+           <x>210</x>
+           <y>80</y>
+           <width>321</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+         <property name="placeholderText">
+          <string>Enter Student Id</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_26">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>80</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Search ID</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_27">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>191</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Search Student</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btn_removeStudent">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>170</y>
+           <width>131</width>
+           <height>51</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+         </property>
+         <property name="text">
+          <string>Remove</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="room">
+       <widget class="QStackedWidget" name="stackedWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>-20</y>
+          <width>1507</width>
+          <height>811</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="pagelogin_2">
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1501</width>
+            <height>821</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditusername_2">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>420</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Balance text dimensions nicely */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Strict padding structure to leave clean space for your icons */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 12px;
+
+    /* Icon Path Definition */
+    background-image: url(:/images/.qtcreator/user.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QLineEdit::placeholder {
+    /* Separate rule explicitly handling empty state hint text rendering */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your username</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditpassword_2">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>490</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Set typed text size to a clean, readable 12pt */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    /* Modern structural borders */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Spacing: 50px left for padlock, 45px right to leave room for the eye button */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 45px; 
+
+    /* LEFT SIDE: Padlock Icon */
+    background-image: url(:/images/.qtcreator/padlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Styled proportionally right below the main font size */
+QLineEdit::placeholder {
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}
+
+/* UNIVERSAL FIX FOR THE RIGHT SIDE ICON */
+QLineEdit &gt; QToolButton {
+    qproperty-icon: url(:/images/.qtcreator/hide.png);
+    qproperty-iconSize: QSize(24, 24);
+    border: none;
+    background: transparent;
+}</string>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your password</string>
+          </property>
+         </widget>
+         <widget class="QToolButton" name="toolButton_2">
+          <property name="geometry">
+           <rect>
+            <x>920</x>
+            <y>510</y>
+            <width>24</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/.qtcreator/hide.png</normaloff>:/images/.qtcreator/hide.png</iconset>
+          </property>
+          <property name="autoRaise">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_login_2">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>570</y>
+            <width>421</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	font: 22pt &quot;Segoe UI&quot;;
+    background-color: #0f2446; /* Dark blue */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>LOGIN</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="home_2">
+         <widget class="QFrame" name="frame_4">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>10</y>
+            <width>1261</width>
+            <height>841</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_11">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>0</y>
+             <width>1181</width>
+             <height>821</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_3">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>10</y>
+            <width>361</width>
+            <height>911</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>160</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>330</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_3">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>420</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>510</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>650</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>250</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="student_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 226, 224);</string>
+         </property>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>710</x>
+            <y>30</y>
+            <width>401</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 700 22pt &quot;Segoe UI&quot;;
+	background-color: rgb(0, 0, 98);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    }</string>
+          </property>
+          <property name="text">
+           <string> Rooms management</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_2">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>140</y>
+            <width>361</width>
+            <height>371</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_addRoom">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>310</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Add Room</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_roomNumber">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>130</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter room number</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_capacity">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>240</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter capacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>191</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Room Number</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>180</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Capacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>191</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Add Room</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_6">
+          <property name="geometry">
+           <rect>
+            <x>290</x>
+            <y>520</y>
+            <width>1141</width>
+            <height>311</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QTableWidget" name="tableWidget_room">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>-10</y>
+             <width>1141</width>
+             <height>301</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    gridline-color: #e5e5e5;
+    font-size: 14pt;
+}
+/* 1. Style the parent header container to remove ugly native margins/borders */
+QHeaderView {
+    background-color: #000050; /* Forces the whole background bar to be blue */
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 2. Update your section style so it matches perfectly */
+QHeaderView::section {
+    background-color: #000050; 
+    color: #ffffff !important;  
+    font-weight: bold;
+    font-size: 20px;
+    qproperty-alignment: 'AlignCenter'; 
+    border: none;
+    /* Add a clean, very subtle line between columns so they don't blend blindly */
+    border-right: 1px solid #12126a; 
+    padding: 0px;
+}
+
+/* 3. Remove any gaps at the very top left/right corner of the table */
+QTableWidget QTableCornerButton::section {
+    background-color: #000050;
+    border: none;
+}</string>
+           </property>
+           <property name="columnCount">
+            <number>4</number>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Room Number</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Capacity</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Occupancy</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Status</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_4">
+          <property name="geometry">
+           <rect>
+            <x>-20</x>
+            <y>-20</y>
+            <width>321</width>
+            <height>861</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame_4{
+	background-color: rgb(0, 0, 54);
+	
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>190</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>390</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>460</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>540</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>660</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>330</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_Home2">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>260</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_3">
+          <property name="geometry">
+           <rect>
+            <x>950</x>
+            <y>180</y>
+            <width>551</width>
+            <height>251</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_searchroom">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_roomNumber_2">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>80</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter room number</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>191</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Room Number</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>191</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Search Room</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_removeroom">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>170</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Remove</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="room_2"/>
+        <widget class="QWidget" name="dormitory_2"/>
+        <widget class="QWidget" name="restaurant_2"/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="dormitory">
+       <widget class="QStackedWidget" name="stackedWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1507</width>
+          <height>782</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="pagelogin_3">
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1501</width>
+            <height>821</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditusername_3">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>420</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Balance text dimensions nicely */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Strict padding structure to leave clean space for your icons */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 12px;
+
+    /* Icon Path Definition */
+    background-image: url(:/images/.qtcreator/user.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QLineEdit::placeholder {
+    /* Separate rule explicitly handling empty state hint text rendering */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your username</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditpassword_3">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>490</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Set typed text size to a clean, readable 12pt */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    /* Modern structural borders */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Spacing: 50px left for padlock, 45px right to leave room for the eye button */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 45px; 
+
+    /* LEFT SIDE: Padlock Icon */
+    background-image: url(:/images/.qtcreator/padlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Styled proportionally right below the main font size */
+QLineEdit::placeholder {
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}
+
+/* UNIVERSAL FIX FOR THE RIGHT SIDE ICON */
+QLineEdit &gt; QToolButton {
+    qproperty-icon: url(:/images/.qtcreator/hide.png);
+    qproperty-iconSize: QSize(24, 24);
+    border: none;
+    background: transparent;
+}</string>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your password</string>
+          </property>
+         </widget>
+         <widget class="QToolButton" name="toolButton_3">
+          <property name="geometry">
+           <rect>
+            <x>920</x>
+            <y>510</y>
+            <width>24</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/.qtcreator/hide.png</normaloff>:/images/.qtcreator/hide.png</iconset>
+          </property>
+          <property name="autoRaise">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_login_3">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>570</y>
+            <width>421</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	font: 22pt &quot;Segoe UI&quot;;
+    background-color: #0f2446; /* Dark blue */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>LOGIN</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="home_3">
+         <widget class="QFrame" name="frame_5">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>10</y>
+            <width>1261</width>
+            <height>841</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>-30</y>
+             <width>1181</width>
+             <height>821</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_5">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>0</y>
+            <width>361</width>
+            <height>901</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>160</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>330</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_5">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>420</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>510</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>650</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_5">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>250</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="student_3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 226, 224);</string>
+         </property>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>730</x>
+            <y>20</y>
+            <width>461</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 700 22pt &quot;Segoe UI&quot;;
+	background-color: rgb(0, 0, 98);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    }</string>
+          </property>
+          <property name="text">
+           <string>Dormitory management</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_7">
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>550</y>
+            <width>1041</width>
+            <height>281</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QTableWidget" name="dormitoryTable">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>-10</y>
+             <width>1041</width>
+             <height>291</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    gridline-color: #e5e5e5;
+    font-size: 14pt;
+}
+/* 1. Style the parent header container to remove ugly native margins/borders */
+QHeaderView {
+    background-color: #000050; /* Forces the whole background bar to be blue */
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 2. Update your section style so it matches perfectly */
+QHeaderView::section {
+    background-color: #000050; 
+    color: #ffffff !important;  
+    font-weight: bold;
+    font-size: 15px;
+    qproperty-alignment: 'AlignCenter'; 
+    border: none;
+    /* Add a clean, very subtle line between columns so they don't blend blindly */
+    border-right: 1px solid #12126a; 
+    padding: 0px;
+}
+
+/* 3. Remove any gaps at the very top left/right corner of the table */
+QTableWidget QTableCornerButton::section {
+    background-color: #000050;
+    border: none;
+}</string>
+           </property>
+           <property name="rowCount">
+            <number>0</number>
+           </property>
+           <property name="columnCount">
+            <number>3</number>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Dormitory Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Capacity</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Rooms</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_6">
+          <property name="geometry">
+           <rect>
+            <x>-40</x>
+            <y>-10</y>
+            <width>321</width>
+            <height>861</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame_6 {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_6">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>220</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_6">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>450</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>510</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_6">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>580</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_6">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>680</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>380</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_home1">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>300</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_6">
+          <property name="geometry">
+           <rect>
+            <x>310</x>
+            <y>120</y>
+            <width>411</width>
+            <height>421</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_addDormitory">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>340</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Add Dormitory</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_dormitoryName">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>150</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Dormitory Name</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_dormitoryCapacity">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>270</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string> Enter capacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_28">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>221</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Dormitory Name</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_29">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>210</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Capacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_30">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Add Dormitory</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_7">
+          <property name="geometry">
+           <rect>
+            <x>920</x>
+            <y>230</y>
+            <width>561</width>
+            <height>251</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_searchDormitory">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_searchDormitory">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>90</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Dormitory Name</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_32">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>211</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Dormitory Name</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_33">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>211</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Search Dormitory</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_removeDormitory">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>170</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Remove</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="room_3">
+         <widget class="QStackedWidget" name="stackedWidget_4">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>-20</y>
+            <width>1507</width>
+            <height>811</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="pagelogin_4">
+           <property name="styleSheet">
+            <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+           </property>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>1501</width>
+              <height>821</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEditusername_4">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>420</y>
+              <width>421</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    /* Balance text dimensions nicely */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Strict padding structure to leave clean space for your icons */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 12px;
+
+    /* Icon Path Definition */
+    background-image: url(:/images/.qtcreator/user.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QLineEdit::placeholder {
+    /* Separate rule explicitly handling empty state hint text rendering */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}</string>
+            </property>
+            <property name="placeholderText">
+             <string>Enter your username</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEditpassword_4">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>490</y>
+              <width>421</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLineEdit {
+    /* Set typed text size to a clean, readable 12pt */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    /* Modern structural borders */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Spacing: 50px left for padlock, 45px right to leave room for the eye button */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 45px; 
+
+    /* LEFT SIDE: Padlock Icon */
+    background-image: url(:/images/.qtcreator/padlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Styled proportionally right below the main font size */
+QLineEdit::placeholder {
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}
+
+/* UNIVERSAL FIX FOR THE RIGHT SIDE ICON */
+QLineEdit &gt; QToolButton {
+    qproperty-icon: url(:/images/.qtcreator/hide.png);
+    qproperty-iconSize: QSize(24, 24);
+    border: none;
+    background: transparent;
+}</string>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::EchoMode::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Enter your password</string>
+            </property>
+           </widget>
+           <widget class="QToolButton" name="toolButton_4">
+            <property name="geometry">
+             <rect>
+              <x>920</x>
+              <y>510</y>
+              <width>24</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="resources.qrc">
+              <normaloff>:/images/.qtcreator/hide.png</normaloff>:/images/.qtcreator/hide.png</iconset>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_login_4">
+            <property name="geometry">
+             <rect>
+              <x>530</x>
+              <y>570</y>
+              <width>421</width>
+              <height>91</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	font: 22pt &quot;Segoe UI&quot;;
+    background-color: #0f2446; /* Dark blue */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}</string>
+            </property>
+            <property name="text">
+             <string>LOGIN</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="home_4">
+           <widget class="QFrame" name="frame_8">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>10</y>
+              <width>1261</width>
+              <height>841</height>
+             </rect>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_34">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>0</y>
+               <width>1181</width>
+               <height>821</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="sidebarFrame_7">
+            <property name="geometry">
+             <rect>
+              <x>-10</x>
+              <y>10</y>
+              <width>361</width>
+              <height>911</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#sidebarFrame {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="btn_dashboard_7">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>160</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>Dashboard</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_room_7">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>330</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>ROOMS</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_dormitory_7">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>420</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>DORMITORY</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_restaurant_7">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>510</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>RESTAURANT</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_logout_7">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>650</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>LOG OUT</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_7">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>250</y>
+               <width>271</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>STUDENTS</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_35">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>30</y>
+               <width>161</width>
+               <height>141</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #0b1e36;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="student_4">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 226, 224);</string>
+           </property>
+           <widget class="QLabel" name="label_36">
+            <property name="geometry">
+             <rect>
+              <x>710</x>
+              <y>30</y>
+              <width>401</width>
+              <height>101</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+	font: 700 22pt &quot;Segoe UI&quot;;
+	background-color: rgb(0, 0, 98);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    }</string>
+            </property>
+            <property name="text">
+             <string> Rooms management</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QFrame" name="frame_addstudent_8">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>140</y>
+              <width>361</width>
+              <height>371</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="btn_addRoom_2">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>310</y>
+               <width>251</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+             </property>
+             <property name="text">
+              <string>Add Room</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_roomNumber_3">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>130</y>
+               <width>321</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="placeholderText">
+              <string>Enter room number</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_capacity_2">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>240</y>
+               <width>321</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="placeholderText">
+              <string>Enter capacity</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_37">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>191</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Room Number</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_38">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>180</y>
+               <width>191</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Capacity</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_39">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>10</y>
+               <width>191</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Add Room</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="frame_9">
+            <property name="geometry">
+             <rect>
+              <x>290</x>
+              <y>520</y>
+              <width>1141</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QTableWidget" name="tableWidget_room_2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>-10</y>
+               <width>1141</width>
+               <height>301</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QTableWidget {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    gridline-color: #e5e5e5;
+    font-size: 14pt;
+}
+/* 1. Style the parent header container to remove ugly native margins/borders */
+QHeaderView {
+    background-color: #000050; /* Forces the whole background bar to be blue */
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 2. Update your section style so it matches perfectly */
+QHeaderView::section {
+    background-color: #000050; 
+    color: #ffffff !important;  
+    font-weight: bold;
+    font-size: 20px;
+    qproperty-alignment: 'AlignCenter'; 
+    border: none;
+    /* Add a clean, very subtle line between columns so they don't blend blindly */
+    border-right: 1px solid #12126a; 
+    padding: 0px;
+}
+
+/* 3. Remove any gaps at the very top left/right corner of the table */
+QTableWidget QTableCornerButton::section {
+    background-color: #000050;
+    border: none;
+}</string>
+             </property>
+             <property name="columnCount">
+              <number>4</number>
+             </property>
+             <attribute name="horizontalHeaderCascadingSectionResizes">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderMinimumSectionSize">
+              <number>200</number>
+             </attribute>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>200</number>
+             </attribute>
+             <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>Room Number</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Capacity</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Occupancy</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Status</string>
+              </property>
+             </column>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="sidebarFrame_8">
+            <property name="geometry">
+             <rect>
+              <x>-30</x>
+              <y>-30</y>
+              <width>321</width>
+              <height>861</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#sidebarFrame_4{
+	background-color: rgb(0, 0, 54);
+	
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="btn_dashboard_8">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>180</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>Dashboard</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_room_8">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>330</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>ROOMS</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_dormitory_8">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>420</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>DORMITORY</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_restaurant_8">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>510</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>RESTAURANT</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_logout_8">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>650</y>
+               <width>291</width>
+               <height>61</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>LOG OUT</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_8">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>260</y>
+               <width>271</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+             </property>
+             <property name="text">
+              <string>STUDENTS</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_40">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>30</y>
+               <width>161</width>
+               <height>141</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #0b1e36;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QFrame" name="frame_addstudent_9">
+            <property name="geometry">
+             <rect>
+              <x>950</x>
+              <y>180</y>
+              <width>551</width>
+              <height>251</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Raised</enum>
+            </property>
+            <widget class="QPushButton" name="btn_searchroom_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>170</y>
+               <width>131</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+             </property>
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_roomNumber_4">
+             <property name="geometry">
+              <rect>
+               <x>210</x>
+               <y>80</y>
+               <width>321</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignmentFlag::AlignCenter</set>
+             </property>
+             <property name="placeholderText">
+              <string>Enter room number</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_41">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>191</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Room Number</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_42">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>10</y>
+               <width>191</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Search Room</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_removeroom_2">
+             <property name="geometry">
+              <rect>
+               <x>310</x>
+               <y>170</y>
+               <width>131</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="room_4"/>
+          <widget class="QWidget" name="dormitory_3"/>
+          <widget class="QWidget" name="restaurant_3"/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="dormitory_4"/>
+        <widget class="QWidget" name="restaurant_4"/>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="restaurant">
+       <widget class="QStackedWidget" name="stackedWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>-10</y>
+          <width>1507</width>
+          <height>791</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="currentIndex">
+         <number>2</number>
+        </property>
+        <widget class="QWidget" name="pagelogin_5">
+         <property name="styleSheet">
+          <string notr="true">
+background-color: rgb(255, 255, 255);</string>
+         </property>
+         <widget class="QLabel" name="label_31">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1501</width>
+            <height>821</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditusername_5">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>420</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Balance text dimensions nicely */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Strict padding structure to leave clean space for your icons */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 12px;
+
+    /* Icon Path Definition */
+    background-image: url(:/images/.qtcreator/user.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+QLineEdit::placeholder {
+    /* Separate rule explicitly handling empty state hint text rendering */
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}</string>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your username</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditpassword_5">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>490</y>
+            <width>421</width>
+            <height>61</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    /* Set typed text size to a clean, readable 12pt */
+    font: 350 12pt &quot;Segoe UI&quot;;
+    color: #0f2446; 
+    background-color: rgb(255, 255, 255);
+    
+    /* Modern structural borders */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+    /* Spacing: 50px left for padlock, 45px right to leave room for the eye button */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px; 
+    padding-right: 45px; 
+
+    /* LEFT SIDE: Padlock Icon */
+    background-image: url(:/images/.qtcreator/padlock.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+/* Styled proportionally right below the main font size */
+QLineEdit::placeholder {
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt; 
+    font-weight: 350;
+    color: #a0aec0; 
+}
+
+/* UNIVERSAL FIX FOR THE RIGHT SIDE ICON */
+QLineEdit &gt; QToolButton {
+    qproperty-icon: url(:/images/.qtcreator/hide.png);
+    qproperty-iconSize: QSize(24, 24);
+    border: none;
+    background: transparent;
+}</string>
+          </property>
+          <property name="echoMode">
+           <enum>QLineEdit::EchoMode::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your password</string>
+          </property>
+         </widget>
+         <widget class="QToolButton" name="toolButton_5">
+          <property name="geometry">
+           <rect>
+            <x>920</x>
+            <y>510</y>
+            <width>24</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resources.qrc">
+            <normaloff>:/images/.qtcreator/hide.png</normaloff>:/images/.qtcreator/hide.png</iconset>
+          </property>
+          <property name="autoRaise">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_login_5">
+          <property name="geometry">
+           <rect>
+            <x>530</x>
+            <y>570</y>
+            <width>421</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	font: 22pt &quot;Segoe UI&quot;;
+    background-color: #0f2446; /* Dark blue */
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>LOGIN</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="home_5">
+         <widget class="QFrame" name="frame_10">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>10</y>
+            <width>1261</width>
+            <height>841</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_43">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>0</y>
+             <width>1181</width>
+             <height>821</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_9">
+          <property name="geometry">
+           <rect>
+            <x>-10</x>
+            <y>10</y>
+            <width>361</width>
+            <height>911</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame {
+	background-color: rgb(0, 0, 54);
+	
+   
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>160</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>330</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_9">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>420</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>510</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>650</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_9">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>250</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_44">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="student_5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 226, 224);</string>
+         </property>
+         <widget class="QLabel" name="label_45">
+          <property name="geometry">
+           <rect>
+            <x>710</x>
+            <y>30</y>
+            <width>451</width>
+            <height>101</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+	font: 700 22pt &quot;Segoe UI&quot;;
+	background-color: rgb(0, 0, 98);
+    color: white;
+    border-radius: 12px;
+    padding: 10px;
+    }</string>
+          </property>
+          <property name="text">
+           <string> Restaurant management</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_10">
+          <property name="geometry">
+           <rect>
+            <x>310</x>
+            <y>20</y>
+            <width>361</width>
+            <height>531</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_addMenu">
+           <property name="geometry">
+            <rect>
+             <x>50</x>
+             <y>480</y>
+             <width>251</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Add Menu</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_breakfast">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>110</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter The Breakfast Menu</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_lunch">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>220</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter The Lunch Menu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_46">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>211</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Breakfast Menu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_47">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>160</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Lunch Menu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_48">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>191</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Add Menu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_52">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>270</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Dinner Menu</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_dinner">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>330</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter The Lunch Menu</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_53">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>380</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Day</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_day">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>430</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Day</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_11">
+          <property name="geometry">
+           <rect>
+            <x>270</x>
+            <y>560</y>
+            <width>1141</width>
+            <height>311</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QTableWidget" name="restaurantTable">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>-10</y>
+             <width>1141</width>
+             <height>301</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    gridline-color: #e5e5e5;
+    font-size: 14pt;
+}
+/* 1. Style the parent header container to remove ugly native margins/borders */
+QHeaderView {
+    background-color: #000050; /* Forces the whole background bar to be blue */
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 2. Update your section style so it matches perfectly */
+QHeaderView::section {
+    background-color: #000050; 
+    color: #ffffff !important;  
+    font-weight: bold;
+    font-size: 20px;
+    qproperty-alignment: 'AlignCenter'; 
+    border: none;
+    /* Add a clean, very subtle line between columns so they don't blend blindly */
+    border-right: 1px solid #12126a; 
+    padding: 0px;
+}
+
+/* 3. Remove any gaps at the very top left/right corner of the table */
+QTableWidget QTableCornerButton::section {
+    background-color: #000050;
+    border: none;
+}</string>
+           </property>
+           <property name="columnCount">
+            <number>5</number>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>200</number>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Day</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Breakfast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Lunch</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Dinner</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Meal Served</string>
+            </property>
+           </column>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="sidebarFrame_10">
+          <property name="geometry">
+           <rect>
+            <x>-30</x>
+            <y>-30</y>
+            <width>321</width>
+            <height>861</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#sidebarFrame_10{
+	background-color: rgb(0, 0, 54);
+	
+    border: none;
+}
+QPushButton {
+    color: #ffffff;
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 11pt;
+    text-align: left;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+QPushButton:hover {
+    background-color: #162e4e;
+}
+/* Active / Pressed State (like the Dashboard button in the image) */
+QPushButton:checked, QPushButton:pressed {
+    background-color: #123769;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_dashboard_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>240</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>Dashboard</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoExclusive">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_room_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>430</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>ROOMS</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_dormitory_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>500</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>DORMITORY</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_restaurant_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>570</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>RESTAURANT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_logout_10">
+           <property name="geometry">
+            <rect>
+             <x>40</x>
+             <y>680</y>
+             <width>291</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>LOG OUT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_10">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>370</y>
+             <width>271</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+QPushButton:hover {
+    color: #ffffff;
+    background-color: #0c2343;
+}
+
+/* This rule handles the button that is currently clicked/active */
+QPushButton:checked {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #123769; /* The prominent blue selection color from the image */
+}</string>
+           </property>
+           <property name="text">
+            <string>STUDENTS</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_49">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>30</y>
+             <width>161</width>
+             <height>141</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #0b1e36;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="resources.qrc">:/images/.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</pixmap>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_home">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>320</y>
+             <width>151</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    color: #a3b8cc;
+    font-family: &quot;Segoe UI&quot;, sans-serif;
+    font-size: 11pt;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}</string>
+           </property>
+           <property name="text">
+            <string>Home</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="frame_addstudent_11">
+          <property name="geometry">
+           <rect>
+            <x>920</x>
+            <y>160</y>
+            <width>551</width>
+            <height>371</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: white;
+border-radius: 12px;
+border: 1px solid #dcdcdc;
+padding: 10px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btn_searchMenu">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>310</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="lineEdit_searchMenu">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>90</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Enter day</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_50">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>191</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 700 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Day</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_51">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>331</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(255, 255, 255);
+font: 350 14pt &quot;Segoe UI&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Search and manage meal day</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_removeMenu">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>310</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Remove</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_serveMeal">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>310</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 98);
+font: 700 14pt &quot;Segoe UI&quot;;
+color:white;</string>
+           </property>
+           <property name="text">
+            <string>Serve</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox_serveType">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>170</y>
+             <width>121</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>Breakfast</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Lunch</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Dinner</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="room_5"/>
+        <widget class="QWidget" name="dormitory_5"/>
+        <widget class="QWidget" name="restaurant_5"/>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1543</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

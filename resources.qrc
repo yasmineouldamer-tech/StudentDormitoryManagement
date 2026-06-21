@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>.qtcreator/ChatGPT Image 18 juin 2026, 16_45_01.png</file>
+        <file>.qtcreator/hide.png</file>
+        <file>.qtcreator/padlock.png</file>
+        <file>.qtcreator/user.png</file>
+        <file>.qtcreator/ChatGPT Image 19 juin 2026, 23_52_17.png</file>
+        <file>.qtcreator/ChatGPT Image 20 juin 2026, 00_30_51.png</file>
+    </qresource>
+</RCC>
